@@ -21,10 +21,10 @@ class DefaultController extends AbstractController
 
     // configuration de route avec yaml . . .
 
-        // $request = Request::createFromGlobals();
-        // dd($request);
-        // $aujourdhui = Carbon ::now();
-        // var_dump($aujourdhui->format('d/m/y'));
+        $request = Request::createFromGlobals();
+        dd($request);
+        $aujourdhui = Carbon ::now();
+        var_dump($aujourdhui->format('d/m/y'));
         
         // dump($article->getTitle());
         // dump($article);
