@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page de test{% endblock %}
+
+{% block body %}
+
+Page de mes articles
+    {% for article in articles %}
+        <p>
+        voici le titre de mon article : {{ article.title }} 
+
+        {{ article.subject }}
+
+        {{ article.user.name }}
+
+        <a href="{{ path('article_show', {'id': article.id, 'title': article.title}) }}">Voir l'article</a>
+        </p>
+    {% endfor %}
+
+
+    <a href="{{ path('home') }}">page principal</a>
+
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page de test{% endblock %}
+
+{% block body %}
+
+Voici l'article choisi
+    <p>
+    voici le titre de mon article : {{ article.title }} 
+
+    {{ article.subject }}
+
+    {{ article.user.name }}
+    </p>
+
+    <a href="{{ path('articles') }}">page principal</a>
+
+{% endblock %}
+
